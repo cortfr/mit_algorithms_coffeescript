@@ -1,0 +1,15 @@
+log/
+tmp/**/*
+.DS_Store
+public/cache/**/*
+doc/api
+doc/app
+nbproject/
+app/stylesheets/.sass-cache
+db/*.sqlite3
+.sass-cache
+*google_prospects*
+.idea
+.redcar
+coverage/
+node_modules
