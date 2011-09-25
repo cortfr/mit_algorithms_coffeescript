@@ -14,10 +14,11 @@ MergeInPlace = (A, p, q, r) ->
       A[x] = L.shift()
 
 
-MergeSort = (A, q = 0, r = A.length) ->
-  pivot = q + (Math.floor(r - q / 2))
-  MergeSort(A, q, pivot)
-  MergeSort(A, q, pivot + 1)
-  Merge(A, q, pivot, r)
+MergeSort = (A, q = 0, r = A.length-1) ->
+  if q < r
+    pivot = q + (Math.floor((r - q) / 2))
+    MergeSort(A, q, pivot)
+    MergeSort(A, pivot + 1, r)
+    MergeInPlace(A, q, pivot, r)
 
-console.log("test")
+exports.MergeSort = MergeSort

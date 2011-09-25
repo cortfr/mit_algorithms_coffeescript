@@ -1,6 +1,4 @@
-Helpers = require "./Helpers.coffee"
-
-InsertionSort = (array) ->
+exports.InsertionSort = (array) ->
   for i in [1..array.length-1]
     current = array[i]
     target_spot = i
@@ -11,14 +9,3 @@ InsertionSort = (array) ->
       else 
         break
     array[target_spot] = current
-
-console.log("Starting")
-
-test_array = Helpers.CreateRandomArray 5
-
-console.log(test_array)
-
-InsertionSort test_array
-
-console.log(test_array)
-
